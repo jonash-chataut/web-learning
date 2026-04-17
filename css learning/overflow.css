@@ -1,0 +1,6 @@
+#all_div{
+    height: 300px;
+    width: 500px;
+    border: solid;
+    overflow: auto;
+}

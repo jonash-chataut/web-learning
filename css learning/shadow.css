@@ -1,0 +1,16 @@
+
+
+h1{
+    text-shadow: 3px 4px 5px red,-4px -4px 5px aqua;
+
+}
+
+#box_shadow{
+    
+    width: 300px;
+    height: 250px;
+    background-color: red;
+    border: solid;
+    box-shadow: 5px 5px 7px;
+    
+}

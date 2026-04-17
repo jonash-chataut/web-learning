@@ -1,0 +1,22 @@
+h1::first-letter{
+    font-size: 1.5em;
+    font-style: italic;
+}
+
+p::first-line{
+    background-color: lightgrey;
+}
+
+p::selection{
+    color: green;
+    background-color: rgb(42, 41, 41);
+}
+
+#list123 li::before{
+    content: "🤝";
+}
+
+#list123 li::marker{
+    content: "✔️";
+    color: green;
+}

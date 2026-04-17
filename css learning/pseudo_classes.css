@@ -1,0 +1,27 @@
+a:link{
+    color: greenyellow;
+}
+a:hover{
+    font-size: 1.5em;
+    color: aquamarine;
+}
+
+a:active{
+    color: aqua;
+}
+
+a:visited{
+    color: palevioletred;
+}
+
+li:hover{
+    background-color: yellow;
+}
+
+li:not(:hover){
+    background-color: lightgreen;
+}
+
+li:nth-child(even){
+    background-color: gainsboro;
+}
