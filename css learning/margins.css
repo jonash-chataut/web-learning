@@ -10,7 +10,7 @@ body{
 
 #box1{
     margin: 50px;
-    background-color: aqua;
+    background-color: hsl(180, 100%, 50%);
     text-align: center;
     font-size: 2em;
 
@@ -22,3 +22,5 @@ body{
     text-align: center;
     font-size: 2em;
 }
+
+/* concepts of margins in css */
