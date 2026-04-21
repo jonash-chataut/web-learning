@@ -1,0 +1,27 @@
+body{
+    display: flex;
+    flex-direction: column;   /*stack container + button vertically */
+    justify-content: center;  /* vertical center */
+    align-items: center;      /* horizontal center */
+
+}
+
+#container{
+    width: 100px;
+    height: 100px;
+    border: solid;
+    font-size: 6em;
+    text-align: center;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 10px;
+}
+
+#roll{
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#roll:hover{
+    background-color: aqua;
+}
