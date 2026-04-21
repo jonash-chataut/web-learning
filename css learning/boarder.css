@@ -9,5 +9,5 @@ p{
     border-bottom: 5px solid red;
     border-left: 5px solid green;
     border-top: 5px solid yellow;
-    border-right: 5px solid blue;
+    border-right: 5px solid rgb(0, 255, 106);
 }
