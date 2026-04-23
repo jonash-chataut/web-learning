@@ -1,6 +1,7 @@
 import Header from "./header.jsx";
 import Footer from "./footer.jsx";
 import Card from "./card.jsx";
+import ColorPicker from "./colorpicker.jsx";
 
 function App() {
   return (
@@ -45,6 +46,8 @@ function App() {
         desc="7️⃣7️⃣7️⃣7️⃣"
         isDisplay={true}
       ></Card>
+
+    <ColorPicker></ColorPicker>
 
       <Footer></Footer>
     </>
