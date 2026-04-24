@@ -1,4 +1,6 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 function ToDoList() {
   const [tasks, setTask] = useState([]);
   const [newTask, setnewTask] = useState("");
@@ -42,38 +44,47 @@ function ToDoList() {
   }
 
   return (
-    <div className="to-do-list">
-      <h1>To-Do-List</h1>
-      <input
-        type="text"
-        name=""
-        id=""
-        placeholder="Enter a task"
-        value={newTask}
-        onChange={handleInputChanges}
-      />
+    <>
+      <div className="to-do-list">
+        <h1>To-Do-List</h1>
+        <input
+          type="text"
+          name=""
+          id=""
+          placeholder="Enter a task"
+          value={newTask}
+          onChange={handleInputChanges}
+        />
 
-      <button className="addButton" onClick={addTask}>
-        Add
-      </button>
+        <button className="addButton" onClick={addTask}>
+          Add
+        </button>
 
-      <ol>
-        {tasks.map((task, index) => (
-          <li key={index}>
-            <span className="text">{task}</span>
-            <button className="deleteButton" onClick={()=>deleteTask(index)}>
-              Delete
-            </button>
-            <button className="upButton" onClick={()=>moveUp(index)}>
-              👆
-            </button>
-            <button className="downButton" onClick={()=>moveDown(index)}>
-              👇
-            </button>
-          </li>
-        ))}
-      </ol>
-    </div>
+        <ol>
+          {tasks.map((task, index) => (
+            <li key={index}>
+              <span className="text">{task}</span>
+              <button
+                className="deleteButton"
+                onClick={() => deleteTask(index)}
+              >
+                Delete
+              </button>
+              <button className="upButton" onClick={() => moveUp(index)}>
+                👆
+              </button>
+              <button className="downButton" onClick={() => moveDown(index)}>
+                👇
+              </button>
+            </li>
+          ))}
+        </ol>
+      </div>
+
+      <div className="digitalclock-link">
+        <Link to="/digitalClock">Click here for digital clock</Link>
+      </div>
+    </>
   );
 }
 

@@ -1,8 +1,16 @@
 import ToDoList from "./to-do-list";
- 
-function App(){
+import DigitalClock from "./digitalClock";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
-  return(<ToDoList></ToDoList>);
+function App() {
+  return (
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<ToDoList />} />
+        <Route path="/digitalClock" element={<DigitalClock />} />
+      </Routes>
+    </BrowserRouter>
+  );
 }
 
-export default App
+export default App;

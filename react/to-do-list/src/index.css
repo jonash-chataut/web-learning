@@ -84,3 +84,109 @@ li{
   font-size: 1.1rem;
   color: #333;
 }
+
+.digitalclock-link {
+  margin-top: 30px;
+  text-align: center;
+}
+
+
+/* css for digital clock link text */
+.digitalclock-link a {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: white;
+  font-size: 1.1rem;
+  font-weight: bold;
+  padding: 12px 25px;
+  border-radius: 30px;
+  box-shadow: 0 4px 15px rgba(0, 242, 254, 0.4);
+  transition: all 0.3s ease;
+}
+
+.digitalclock-link a:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 20px rgba(0, 242, 254, 0.6);
+  background: linear-gradient(135deg, #43e97b, #38f9d7);
+}
+
+/* css for digital clock page */
+
+.digital-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+/* background image */
+.digital-container::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: url("https://images.unsplash.com/photo-1549692520-acc6669e2f0c?auto=format&fit=crop&w=1600&q=80")
+    center/cover no-repeat;
+
+  filter: brightness(0.35) contrast(1.2) saturate(1.4);
+  transform: scale(1.08);
+}
+
+/* Neon overlay for anime effect */
+.digital-container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(255, 0, 255, 0.25),
+    rgba(0, 255, 255, 0.25),
+    rgba(0, 0, 0, 0.6)
+  );
+}
+
+/* clock stays above background */
+.clock {
+  position: relative;
+  z-index: 2;
+
+  padding: 40px 70px;
+  border-radius: 25px;
+
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow:
+    0 0 25px rgba(255, 0, 255, 0.3),
+    0 0 50px rgba(0, 255, 255, 0.2);
+}
+
+/* floating effect */
+.clock {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+
+/* text glow */
+.clock span {
+  font-size: 4rem;
+  font-weight: bold;
+  color: #ffd6ff;
+
+  text-shadow:
+    0 0 10px #ff5cf0,
+    0 0 25px #ff00ff;
+}
